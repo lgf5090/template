@@ -11,13 +11,16 @@ CLEANED_TAG := $(patsubst v%,%,$(GIT_TAG))
 CLEAN_DIRS := build dist $(PACKAGE_NAME).egg-info
 
 ifeq ($(OS),Windows_NT)
+	# SHELL := nu.exe
 	SHELL := cmd.exe
 	ifneq (,$(findstring powershell,$(SHELL)))
 		RM_DIR = if (Test-Path "$1") { Remove-Item "$1" -Recurse -Force }
 	else ifneq (,$(findstring pwsh,$(SHELL)))
 		RM_DIR = if (Test-Path "$1") { Remove-Item "$1" -Recurse -Force }
-	else
+	else ifneq (,$(findstring cmd,$(SHELL)))
 		RM_DIR = if exist "$(1)" rd /s /q "$(1)"
+	else
+		RM_DIR = rm -rf "$1"
 	endif
 else
 	RM_DIR = rm -rf "$1"
@@ -28,7 +31,7 @@ endif
 clean:
 	@echo "Cleaning directories..."
 	$(foreach dir,$(CLEAN_DIRS),\
-		$(shell $(call RM_DIR,$(dir))) \
+		$(if $(wildcard $(dir)),$(shell $(call RM_DIR,$(dir))),) \
 	)
 	@echo "Clean completed."
 
