@@ -1,0 +1,23 @@
+{
+	"recommendations": [
+		"formulahendry.code-runner",
+		"ms-azuretools.vscode-docker",
+		"formulahendry.docker-explorer",
+		"editorconfig.editorconfig",
+		"tamasfe.even-better-toml",
+		"mhutchie.git-graph",
+		"donjayamanne.githistory",
+		"howardzuo.vscode-git-tags",
+		"github.codespaces",
+		"codezombiech.gitignore",
+		"eamodio.gitlens",
+		"docsmsft.docs-yaml",
+		"ms-vscode.makefile-tools",
+		"yzhang.markdown-all-in-one",
+		"shd101wyy.markdown-preview-enhanced",
+		"ms-vscode.powershell",
+		"ms-vscode-remote.vscode-remote-extensionpack",
+		"ms-vscode.remote-repositories",
+		"vscode-icons-team.vscode-icons"
+	]
+}
