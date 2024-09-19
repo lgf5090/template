@@ -1,7 +1,7 @@
 root = true                         # 根目录的配置文件，编辑器会由当前目录向上查找，如果找到 `roor = true` 的文件，则不再查找
 
 [*]
-indent_style = space                # 空格缩进,可选"space"、"tab"
+indent_style = tab                # 空格缩进,可选"space"、"tab"
 indent_size = 2                     # 缩进空格为2个
 end_of_line = lf                    # 结尾换行符，可选"lf"、"cr"、"crlf"
 charset = utf-8                     # 文件编码是 utf-8
