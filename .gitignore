@@ -1,1 +1,23 @@
 # This file is used to exclude files and directories from Git version control.
+# ignore python virtual environment
+.venv/
+.env/
+venv/
+env/
+
+# ignore node_modules directory
+node_modules/
+
+# ignore build and distribution directories
+build/
+dist/
+
+# ignore pip cache directory
+.cache/
+
+# ignore pyc and pyo files
+*.egg-info/
+*.egg
+*.pyc
+*.pyo
+*.pyd
